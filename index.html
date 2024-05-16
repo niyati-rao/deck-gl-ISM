@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='UTF-8' />
+    <title>deck.gl example</title>
+    <style>
+    #map {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      
+    }
+    #layerControls {
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    z-index: 1; /* Ensure the layer controls are above the map */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  #layerControls label {
+    display: block;
+    margin-bottom: 5px;
+  }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="layerControls">
+      <label><input type="checkbox" id="pathLayerCheckbox" checked> River Layer</label><br>
+      <label><input type="checkbox" id="textLayerCheckbox" checked> Text Layer</label><br>
+      <label><input type="checkbox" id="geoJsonLayerCheckbox" checked> AMR points Layer</label><br>
+    </div>
+    <script type="module" src='app.js'></script>
+  </body>
+</html>
